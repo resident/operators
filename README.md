@@ -23,41 +23,41 @@ After that, you need to implement methods with operator overloading logic in you
 
 ### php.ini options
 
-| Option                                 |                        Operator                         |           Class method           | Default value |
-|:---------------------------------------|:-------------------------------------------------------:|:--------------------------------:|:-------------:|
-| operators.overload.add                 |                           `+`                           |       `__add($op1, $op2)`        |       0       |
-| operators.overload.sub                 |                           `-`                           |       `__sub($op1, $op2)`        |       0       |
-| operators.overload.mul                 |                    `*, +$var, -$var`                    |       `__mul($op1, $op2)`        |       0       |
-| operators.overload.pow                 |                          `**`                           |       `__pow($op1, $op2)`        |       0       |
-| operators.overload.div                 |                           `/`                           |       `__div($op1, $op2)`        |       0       |
-| operators.overload.mod                 |                           `%`                           |       `__mod($op1, $op2)`        |       0       |
-| operators.overload.sl                  |                          `<<`                           |        `__sl($op1, $op2)`        |       0       |
-| operators.overload.sr                  |                          `>>`                           |        `__sr($op1, $op2)`        |       0       |
-| operators.overload.concat              |                           `.`                           |      `__concat($op1, $op2)`      |       0       |
-| operators.overload.bw_or               |                          `\|`                           |       `__bwOr($op1, $op2)`       |       0       |
-| operators.overload.bw_and              |                           `&`                           |      `__bwAnd($op1, $op2)`       |       0       |
-| operators.overload.bw_xor              |                           `^`                           |      `__bwXor($op1, $op2)`       |       0       |
-| operators.overload.bw_not              |                           `~`                           |           `__bwNot()`            |       0       |
-| operators.overload.bool_not            |                           `!`                           |          `__boolNot()`           |       0       |
-| operators.overload.bool_xor            |                          `xor`                          |     `__boolXor($op1, $op2)`      |       0       |
-| operators.overload.is_identical        |                          `===`                          |   `__isIdentical($op1, $op2)`    |       0       |
-| operators.overload.is_not_identical    |                          `!==`                          |  `__isNotIdentical($op1, $op2)`  |       0       |
-| operators.overload.is_equal            |                          `==`                           |     `__isEqual($op1, $op2)`      |       0       |
-| operators.overload.is_not_equal        |                          `!=`                           |    `__isNotEqual($op1, $op2)`    |       0       |
-| operators.overload.is_smaller          |                           `<`                           |    `__isSmaller($op1, $op2)`     |       0       |
-| operators.overload.is_smaller_or_equal |                          `<=`                           | `__isSmallerOrEqual($op1, $op2)` |       0       |
-| operators.overload.assign              |                           `=`                           |        `__assign($value)`        |       0       |
-| operators.overload.assign_op           |  `+=, -=, *=, **=, /=, %=, <<=, >>=, .=, \|=, &=, ^=`   | `__assignOp($value, int $opcode` |       0       |
-| operators.overload.pre_inc             |                        `++$var`                         |           `__preInc()`           |       0       |
-| operators.overload.pre_dec             |                        `--$var`                         |           `__preDec()`           |       0       |
-| operators.overload.post_inc            |                        `$var++`                         |          `__postInc()`           |       0       |
-| operators.overload.post_dec            |                        `$var--`                         |          `__postDec()`           |       0       |
-| operators.overload.pre_inc_obj         |                      `++$obj->var`                      |         `__preIncObj()`          |       0       |
-| operators.overload.pre_dec_obj         |                      `--$obj->var`                      |         `__preDecObj()`          |       0       |
-| operators.overload.post_inc_obj        |                      `$obj->var++`                      |         `__postIncObj()`         |       0       |
-| operators.overload.post_dec_obj        |                      `$obj->var--`                      |         `__postDecObj()`         |       0       |
-| operators.overload.cast                | `(int), (double), (float), (string), (array), (object)` |       `__cast(int $type)`        |       0       |
-| operators.overload.bool                |                        `(bool)`                         |            `__bool()`            |       0       |
+| Option                                 |                            Operator                             |           Class method           | Default value |
+|:---------------------------------------|:---------------------------------------------------------------:|:--------------------------------:|:-------------:|
+| operators.overload.add                 |                               `+`                               |       `__add($op1, $op2)`        |       0       |
+| operators.overload.sub                 |                               `-`                               |       `__sub($op1, $op2)`        |       0       |
+| operators.overload.mul                 |                       `*` `+$var` `-$var`                       |       `__mul($op1, $op2)`        |       0       |
+| operators.overload.pow                 |                              `**`                               |       `__pow($op1, $op2)`        |       0       |
+| operators.overload.div                 |                               `/`                               |       `__div($op1, $op2)`        |       0       |
+| operators.overload.mod                 |                               `%`                               |       `__mod($op1, $op2)`        |       0       |
+| operators.overload.sl                  |                              `<<`                               |        `__sl($op1, $op2)`        |       0       |
+| operators.overload.sr                  |                              `>>`                               |        `__sr($op1, $op2)`        |       0       |
+| operators.overload.concat              |                               `.`                               |      `__concat($op1, $op2)`      |       0       |
+| operators.overload.bw_or               |                              `\|`                               |       `__bwOr($op1, $op2)`       |       0       |
+| operators.overload.bw_and              |                               `&`                               |      `__bwAnd($op1, $op2)`       |       0       |
+| operators.overload.bw_xor              |                               `^`                               |      `__bwXor($op1, $op2)`       |       0       |
+| operators.overload.bw_not              |                               `~`                               |           `__bwNot()`            |       0       |
+| operators.overload.bool_not            |                               `!`                               |          `__boolNot()`           |       0       |
+| operators.overload.bool_xor            |                              `xor`                              |     `__boolXor($op1, $op2)`      |       0       |
+| operators.overload.is_identical        |                              `===`                              |   `__isIdentical($op1, $op2)`    |       0       |
+| operators.overload.is_not_identical    |                              `!==`                              |  `__isNotIdentical($op1, $op2)`  |       0       |
+| operators.overload.is_equal            |                              `==`                               |     `__isEqual($op1, $op2)`      |       0       |
+| operators.overload.is_not_equal        |                              `!=`                               |    `__isNotEqual($op1, $op2)`    |       0       |
+| operators.overload.is_smaller          |                               `<`                               |    `__isSmaller($op1, $op2)`     |       0       |
+| operators.overload.is_smaller_or_equal |                              `<=`                               | `__isSmallerOrEqual($op1, $op2)` |       0       |
+| operators.overload.assign              |                               `=`                               |        `__assign($value)`        |       0       |
+| operators.overload.assign_op           | `+=` `-=` `*=` `**=` `/=` `%=` `<<=` `>>=` `.=` `\|=` `&=` `^=` | `__assignOp($value, int $opcode` |       0       |
+| operators.overload.pre_inc             |                            `++$var`                             |           `__preInc()`           |       0       |
+| operators.overload.pre_dec             |                            `--$var`                             |           `__preDec()`           |       0       |
+| operators.overload.post_inc            |                            `$var++`                             |          `__postInc()`           |       0       |
+| operators.overload.post_dec            |                            `$var--`                             |          `__postDec()`           |       0       |
+| operators.overload.pre_inc_obj         |                          `++$obj->var`                          |         `__preIncObj()`          |       0       |
+| operators.overload.pre_dec_obj         |                          `--$obj->var`                          |         `__preDecObj()`          |       0       |
+| operators.overload.post_inc_obj        |                          `$obj->var++`                          |         `__postIncObj()`         |       0       |
+| operators.overload.post_dec_obj        |                          `$obj->var--`                          |         `__postDecObj()`         |       0       |
+| operators.overload.cast                |  `(int)` `(double)` `(float)` `(string)` `(array)` `(object)`   |       `__cast(int $type)`        |       0       |
+| operators.overload.bool                |                            `(bool)`                             |            `__bool()`            |       0       |
 
 ## Constants
 
