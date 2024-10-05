@@ -1,13 +1,15 @@
 --TEST--
-test1() Basic test
+Operator + overload
 --EXTENSIONS--
 operators
 --FILE--
 <?php
-$ret = test1();
+ini_set('operators.overload.add', true);
 
-var_dump($ret);
+include 'Number.php';
+
+echo (new Number(10) + 3)->var;
+
 ?>
 --EXPECT--
-The extension operators is loaded and working!
-NULL
+13

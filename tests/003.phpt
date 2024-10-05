@@ -1,12 +1,15 @@
 --TEST--
-test2() Basic test
+Operator - overload
 --EXTENSIONS--
 operators
 --FILE--
 <?php
-var_dump(test2());
-var_dump(test2('PHP'));
+ini_set('operators.overload.sub', true);
+
+include 'Number.php';
+
+echo (new Number(10) - 3)->var;
+
 ?>
 --EXPECT--
-string(11) "Hello World"
-string(9) "Hello PHP"
+7

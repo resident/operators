@@ -38,4 +38,6 @@ tests/**/*.log
 tests/**/*.sh
 tests/**/*.db
 tests/**/*.mem
+!tests/Number.php
 tmp-php.ini
+.idea
